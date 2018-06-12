@@ -1,0 +1,12 @@
+var numbers = [3,30,34,5,9];
+
+function getMaxSequence(arr) {
+	arr.sort(function(a, b) {
+  	var ab = ''+a+b;
+    var ba = ''+b+a;
+    return ab > ba ? - 1 : (ab < ba ? 1 : 0)
+  })
+  return arr.join('');
+}
+
+console.log(getMaxSequence(numbers));
